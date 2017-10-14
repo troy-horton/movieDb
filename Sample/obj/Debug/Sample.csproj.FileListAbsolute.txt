@@ -1,0 +1,20 @@
+c:\users\thorton\documents\visual studio 2015\Projects\Sample\Sample\bin\Debug\Sample.exe.config
+C:\Users\thorton\Documents\Visual Studio 2015\Projects\Sample\Sample\bin\Debug\Sample.exe
+C:\Users\thorton\Documents\Visual Studio 2015\Projects\Sample\Sample\bin\Debug\Sample.pdb
+C:\Users\thorton\Documents\Visual Studio 2015\Projects\Sample\Sample\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\thorton\Documents\Visual Studio 2015\Projects\Sample\Sample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\thorton\Documents\Visual Studio 2015\Projects\Sample\Sample\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\thorton\Documents\Visual Studio 2015\Projects\Sample\Sample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\thorton\Documents\Visual Studio 2015\Projects\Sample\Sample\obj\Debug\Sample.csprojResolveAssemblyReference.cache
+C:\Users\thorton\Documents\Visual Studio 2015\Projects\Sample\Sample\obj\Debug\Sample.exe
+C:\Users\thorton\Documents\Visual Studio 2015\Projects\Sample\Sample\obj\Debug\Sample.pdb
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\bin\Debug\Sample.exe.config
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\obj\Debug\Sample.exe
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\obj\Debug\Sample.pdb
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\bin\Debug\Sample.exe
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\bin\Debug\Sample.pdb
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\thorton\Documents\GitHub\movieDb\Sample\obj\Debug\Sample.csprojResolveAssemblyReference.cache

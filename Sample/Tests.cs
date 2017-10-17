@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Configuration;
 using Newtonsoft.Json;
+using Sample.Endpoints.Movies;
+
 namespace Sample
 {
   [TestClass]

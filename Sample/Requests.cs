@@ -9,19 +9,39 @@ using System.Diagnostics;
 
 namespace Sample
 {
-  class Requests
+  public class Requests
   {
-    Uri baseAddress = new Uri("https://api.themoviedb.org/");
-    public HttpResponseMessage Get(string Endpoint)
+    private string endpoint { get; set; }
+    private APIs api { get; set; }
+
+    public Requests(APIs API, string Endpoint)
     {
-      //new http client
-      HttpClient client = new HttpClient();
-      //set base address
-      client.BaseAddress = baseAddress;
+      this.api = API;
+      this.endpoint = Endpoint;
+    }
+    //public HttpResponseMessage Get(string Endpoint)
+    //{
+    //  //new http client
+    //  HttpClient client = new HttpClient();
+    //  //set base address
+    //  client.BaseAddress = baseAddress;
+    //  //send request and return response
+    //  try
+    //  {
+    //    return GetRequest(Client: client, Endpoint: Endpoint).Result;
+    //  }
+    //  catch (Exception ex)
+    //  {
+    //    Debug.WriteLine(ex);
+    //  }
+    //  return null;
+    //}
+    public HttpResponseMessage Get()
+    {
       //send request and return response
       try
       {
-        return GetRequest(Client: client, Endpoint: Endpoint).Result;
+        return GetRequest().Result;
       }
       catch (Exception ex)
       {
@@ -29,10 +49,11 @@ namespace Sample
       }
       return null;
     }
-    private async Task<HttpResponseMessage> GetRequest(HttpClient Client, string Endpoint)
+    private async Task<HttpResponseMessage> GetRequest()
     {
       //use http client to send get request to endpoint
-      return await Client.GetAsync(Endpoint);
+      
+      return await this.api.v3Client.GetAsync(endpoint);
     }
   }
 }

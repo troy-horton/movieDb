@@ -114,14 +114,43 @@ namespace Sample
     * 2.  Assert that response code is 401
     * 3.  Assert that in the response body status_code and status_message are correct
     */
-    string apiKey = null;
     [TestInitialize]
     public void Setup()
     {
-      apiKey = ConfigurationManager.AppSettings["ApiKey"];
+
     }
+    //[TestMethod]
+    //public void GetMovieDetailsSuccess()
+    //{
+    //  /*
+    //   * Assert that the GET movie endpoint receives a 200 response, verify response body
+    //   * 1.  Send call to get endpoint 3/movie/{movieId}?api_key={apiKey}&language=en-US where movie id is 274
+    //   * 2.  Assert that response code is 200
+    //   * 3.  Assert that the movie title is correct
+    //   */
+    //  //new requests object
+    //  Requests requests = new Requests();
+    //  //send get call with appropriate endpoint and apikey
+    //  var response = requests.Get(Endpoint: string.Format(@"3/movie/{0}?api_key={1}&language=en-US", "274", apiKey));
+    //  MovieDetailsResponse detailsObject = null;
+
+    //  try
+    //  {
+    //    //deserialize json response
+    //    detailsObject = JsonConvert.DeserializeObject<MovieDetailsResponse>(response.Content.ReadAsStringAsync().Result);
+    //  }
+    //  catch (JsonReaderException jsonEx)
+    //  {
+    //    //fail test if deserialization fails
+    //    Assert.Fail(string.Format("Unable to deserialize response.  Exception: {0}"), jsonEx);
+    //  }
+    //  //assert that response has a 200 OK code
+    //  Assert.AreEqual(200, (int)response.StatusCode);
+    //  //assert that the movie title is correct in the response body
+    //  Assert.AreEqual("The Silence of the Lambs", detailsObject.title);
+    //}
     [TestMethod]
-    public void GetMovieDetailsSuccess()
+    public void GetMovieDetailsSuccess1()
     {
       /*
        * Assert that the GET movie endpoint receives a 200 response, verify response body
@@ -130,11 +159,11 @@ namespace Sample
        * 3.  Assert that the movie title is correct
        */
       //new requests object
-      Requests requests = new Requests();
+      APIs api = new APIs();
       //send get call with appropriate endpoint and apikey
-      var response = requests.Get(Endpoint: string.Format(@"3/movie/{0}?api_key={1}&language=en-US", "274", apiKey));
+      //var response = requests.Get(Endpoint: string.Format(@"3/movie/{0}?api_key={1}&language=en-US", "274", apiKey));
+      var response = api.Movies.MovieDetails(MovieId: "274").Get();
       MovieDetailsResponse detailsObject = null;
-
       try
       {
         //deserialize json response
@@ -151,38 +180,6 @@ namespace Sample
       Assert.AreEqual("The Silence of the Lambs", detailsObject.title);
     }
 
-    [TestMethod]
-    public void GetMovieDetailsNoApiKey()
-    {
-      /*
-      * Assert that the GET movie endpoint receives a 401 response, no api key, verify response body
-      * 1.  Send call to get endpoint 3/movie/{movieId}?api_key={apiKey}&language=en-US using an empty api key
-      * 2.  Assert that response code is 401
-      * 3.  Assert that the response body status_code is 7
-      * 4.  Assert that the response body status_message is "Invalid API key: You must be granted a valid key."
-       */
-      //new requests object
-      Requests requests = new Requests();
-      //send get call with appropriate endpoint and no apikey
-      var response = requests.Get(Endpoint: string.Format(@"3/movie/{0}?api_key={1}&language=en-US", "247", string.Empty));
-      MovieDetailsResponse detailsObject = null;
-      try
-      {
-        //deserialize json response
-        detailsObject = JsonConvert.DeserializeObject<MovieDetailsResponse>(response.Content.ReadAsStringAsync().Result);
-      }
-      catch (JsonReaderException jsonEx)
-      {
-        //fail test if deserialization fails
-        Assert.Fail(string.Format("Unable to deserialize response.  Exception: {0}"), jsonEx);
-      }
-      //assert that response has a 401 Unauthorized code
-      Assert.AreEqual(401, (int)response.StatusCode);
-      //assert that the response status_code object is correct
-      Assert.AreEqual(7, detailsObject.status_code);
-      //assert that the response status_message object is correct
-      Assert.AreEqual("Invalid API key: You must be granted a valid key.", detailsObject.status_message);
-    }
     [TestMethod]
     public void PostMovieRatingSuccess()
     {

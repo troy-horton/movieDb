@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIs.cs" />
+    <Compile Include="Endpoints\Movies\Movies.cs" />
     <Compile Include="ErrorResponse.cs" />
     <Compile Include="MovieDetailsResponse.cs" />
     <Compile Include="Program.cs" />

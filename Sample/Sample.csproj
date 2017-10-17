@@ -55,7 +55,7 @@
     <Compile Include="APIs.cs" />
     <Compile Include="Endpoints\Movies\Movies.cs" />
     <Compile Include="ErrorResponse.cs" />
-    <Compile Include="MovieDetailsResponse.cs" />
+    <Compile Include="Endpoints\Movies\MovieDetailsResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests.cs" />
